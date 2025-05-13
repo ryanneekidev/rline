@@ -1,0 +1,170 @@
+.login-container{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: radial-gradient(circle at bottom right, hsl(50, 87%, 73%), #B0F2B4);
+}
+
+.brand-container{
+    background-image: radial-gradient(circle at bottom right, #F6E27F, #B0F2B4);
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.branding{
+    color: #FFFFFF;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.login-card-container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+}
+
+.login-card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6rem;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    justify-self: flex-start;
+
+    width: 80%;
+    height: 20rem;
+
+    box-sizing: border-box;
+
+    border-radius: 0.5rem;
+}
+
+.login-card-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.login-card-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-card-credentials-container{
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.login-card-credentials-username-field-label, .login-card-credentials-password-field-label{
+    font-size: 1.25rem;
+}
+
+#login-card-credentials-username-field{
+    margin-bottom: 1rem;
+}
+
+#login-card-credentials-username-field, #login-card-credentials-password-field{
+    height: 2rem;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #d8d8d8;
+    outline: none;
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: all;
+    font-size: 1.25rem;
+}
+
+#login-card-credentials-username-field:focus, #login-card-credentials-password-field:focus{
+    border: 1px solid #adadad;
+}
+
+/*
+.login-card-error-card-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.login-card-error-card{
+    width: 100%;
+    height: 100%;
+    background-color: #F21B3F;
+    color: white;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+.login-card-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 1rem;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+@property --gradient-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsl(50, 87%, 73%);
+}
+
+.login-card-button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    background-image: radial-gradient(circle at bottom right, var(--gradient-color), #B0F2B4);
+    border: none;
+    border-radius: 0.5rem;
+    height: 100%;
+    font-size: 1.25rem;
+    transition: --gradient-color 1s linear;
+}
+
+.login-card-button:hover{
+    --gradient-color: hsl(50, 87%, 63%);
+    background-image: radial-gradient(circle at bottom right, var(--gradient-color), hsl(124, 72%, 82%));
+}
+
+.login-card-button:active{  
+    background-color: #1e880d;
+}
